@@ -1,0 +1,46 @@
+input[type="text"],  
+input[type="date"],
+textarea,
+.text-wrap
+{ 
+	width: 100% !important;
+}
+
+textarea[name="caption"]
+{
+	min-height: 130px;
+}
+
+.commands
+{
+	position: fixed;
+	right: 0;
+	top: 0;
+	padding: 0 5px;
+	margin: 0;
+	background: #fff;
+	z-index: 99;
+	width: 100%;
+	box-shadow: 0px 0px 15px #888888;
+}
+
+.submit
+{
+	float: right;
+}
+
+.shortcut
+{
+	float: left;
+}
+
+.commands *
+{
+	padding-left: 0.3em;
+	margin: 5px 2px;
+}
+
+/* HACK texttext */
+.text-core .text-wrap textarea, .text-core .text-wrap input {
+	font: 'alegreyaregular', Helvetica, Helvetica Neue, Arial !important;
+}

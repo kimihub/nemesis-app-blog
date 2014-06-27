@@ -1,0 +1,12 @@
+.sortable li input {
+	float: right;
+}
+
+.sortable li {
+	background: #D2DFF5;
+}
+
+.nameCategory {
+	width: 46%;
+	min-width: 200px;
+}

@@ -1,0 +1,698 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+a,a:link,a:visited {
+	color: #1D5CCC;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #1D5CCC;
+	text-decoration: underline;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body  {
+    font: 16px/26px 'alegreyaregular', Helvetica, Helvetica Neue, Arial;
+}
+
+input, select, table, button, textarea {
+    font-family: 'alegreyaregular', Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.full {
+	width: 100% !important;
+}
+
+/* ===================
+    ALL: 
+   =================== */
+
+.header-container {
+    border-bottom: 0 none;
+}
+
+.footer-container,
+.main aside {
+    border-top: 0 none;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: transparent;
+}
+
+.title {
+    color: black;
+}
+
+/* ==============
+    ARTICLE
+   ============== */
+article {
+	padding: 5px 5px 10px;
+	position: relative;
+	max-height: 800px;
+}
+
+article.draft header span {
+	color: white;
+	position: absolute;
+	right: 0.1em;
+	top: 0.1em;
+	text-transform: uppercase;
+	background-color: rgba(29, 92, 204, 0.3);
+	opacity: 0.7;
+}
+
+article header h1 {
+	color: #1D5CCC;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #1D5CCC;
+	font-weight: bold;
+}
+
+article header datetime {
+	
+}
+
+article header ul.categories {
+	margin: 0;
+	padding: 0;
+}
+
+article header ul.categories li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 10px;
+}
+
+article header ul.categories li.catTitle {
+	font-weight: bold;
+}
+
+article section.medias  {
+	padding-top: 0.8em;
+}
+
+article section.medias ul  {
+	position: relative;
+	width: 100%;
+	margin: 1em 0 0 0;
+	padding: 0;
+	min-height: 100px;
+	text-align: center;
+}
+
+article section.medias.thumbnails ul  {
+	text-align: left;
+}
+
+article section.medias ul li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+article section.medias.thumbnails ul li {
+	margin: 0.1em;
+}
+article section.medias.thumbnails ul li img {
+	-webkit-transition:all 0.3s ease-in;  
+   -moz-transition:all 0.3s ease-in;  
+   -o-transition:all 0.3s ease-in;  
+   transition:all 0.3s ease-in; 
+   opacity: 0.65;
+   max-height: 120px;
+}
+
+article section.medias.thumbnails ul li:hover img{
+	opacity: 1;
+}
+article section.medias.gallery ul li {
+	display: none;
+}
+
+article section.medias.gallery ul li.current,
+article section.medias.gallery ul li.controlLeft,
+article section.medias.gallery ul li.controlRight{
+	display: inline-block;
+}
+
+article section.medias.gallery ul li.controlLeft,
+article section.medias.gallery ul li.controlRight  {
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	font-size: 110px;
+	color: #1D5CCC;
+	text-shadow: -1px -2px 7px rgba(150, 150, 150, 1);
+	position: relative;
+	-webkit-transition:all 0.3s ease-in;  
+   -moz-transition:all 0.3s ease-in;  
+   -o-transition:all 0.3s ease-in;  
+   transition:all 0.3s ease-in; 
+   opacity: 0.65;
+}
+
+article section.medias.gallery ul li.controlLeft:hover,
+article section.medias.gallery ul li.controlRight:hover {
+	opacity: 1;
+}
+
+article section.medias.gallery ul li.controlLeft {
+	float: left;
+	text-align: left;
+}
+
+article section.medias.gallery ul li.controlRight {
+	float: right;
+	text-align: right;
+}
+
+article section.medias.gallery ul li.current {
+	padding: 0 60px 15px;
+}
+
+article section.medias.gallery ul li#mediaFull {
+	width: 100% !important;
+	padding: 0;
+}
+
+article section.medias ul li img {
+	border: 3px solid #AEC5ED;
+	max-width: 100%;
+}
+
+article section.medias ul li a {
+	border: 9px solid #D2DFF5;
+	display: inline-block;
+}
+
+article footer ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+article footer ul li {
+	list-style-type: none;
+	display: inline;
+	padding: 0 0.3em 0 0;
+	margin: 0;
+}
+
+article footer .comment {
+	float: right;
+}
+
+.clr {
+	clear: both;
+}
+
+
+
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0;
+
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: black !important;
+    background: transparent;
+}
+
+nav a:hover,
+nav a:visited, 
+nav a:active {
+    color: black !important;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    padding: 1% 2% 1% 1% ;
+}
+
+.main aside h3 {
+	margin: 0.3em 0;
+}
+
+.footer-container footer {
+    color: black;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   
+
+   
+button,
+input[type='button'],
+input[type='submit'],
+.button {
+	color: #ffffff;
+	padding: 5px;
+	background: -moz-linear-gradient(
+		top,
+		#aec5ed 0%,
+		#aec5ed);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#aec5ed),
+		to(#aec5ed));
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 0px solid #1d5dcc;
+	-moz-box-shadow:
+		0px 1px 3px rgba(0,0,0,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(0,0,0,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	box-shadow:
+		0px 1px 3px rgba(0,0,0,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	text-shadow:
+		0px -1px 0px rgba(29,93,204,0.7),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+button:active,
+input[type='button']:active,
+input[type='submit']:active,
+.button:active {
+	color: #ffffff;
+	padding: 5px;
+	background: -moz-linear-gradient(
+		top,
+		#aec5ed 0%,
+		#d2dff5);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#aec5ed),
+		to(#d2dff5));
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 0px solid #1d5dcc;
+	-moz-box-shadow:
+		0px 1px 3px rgba(0,0,0,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(0,0,0,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	box-shadow:
+		0px 1px 3px rgba(0,0,0,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	text-shadow:
+		0px -1px 0px rgba(29,93,204,0.7),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+.button {
+	color: white !important;
+}
+
+.button:hover,
+.button:active {
+	color: white !important;
+	text-decoration: none !important;
+}
+
+
+input.noPadding,
+input.noPadding,
+.button.noPadding,
+.noPadding input,
+.noPadding button,
+.noPadding .button {
+	padding: 0 0.5em !important;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='date'],
+textarea {
+	padding: 5px;
+	color: black;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ddd !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #ddd !important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ddd !important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: #ddd !important;
+}
+
+.error
+{
+	color: red !important;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: block;
+		line-height: 1.4em;
+		width: 100%;
+    }
+
+    .oldie nav a {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+       /* -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;*/
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        width: 100%;
+		margin-bottom: 1.3em;
+		font-weight: normal;
+    }
+	
+	nav a {
+		font-weight: normal;
+	}
+	
+	nav li.current a {
+		font-weight: bold;
+		font-style: italic;
+	}
+	
+	nav.pages a {
+		font-weight: bold;
+		line-height: 1.8em;
+	}
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main > section {
+        float: left;
+        width: 80%;
+    }
+
+    .main > aside {
+        float: left;
+        width: auto; 
+		max-width: 210px;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: auto; /* 1140px - 10% for margins */
+        margin: 0 1%;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

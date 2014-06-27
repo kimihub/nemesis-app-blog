@@ -1,0 +1,74 @@
+.sortable, .connected {
+	padding: 0;
+	margin: 0;
+	width: 50%;
+	min-width: 310px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.sortable.grid {
+	overflow: hidden;
+}
+.sortable li, .connected li {
+	list-style: none;
+	border: 1px solid #CCC;
+	background: #F6F6F6;
+	font-family: "Tahoma";
+	color: #1C94C4;
+	padding: 5px;
+	margin: 1% 0 1%;
+	height: 22px;
+}
+.connected li {
+	margin: 1%;
+}
+
+li.disabled {
+	opacity: 0.5;
+}
+.sortable.grid li {
+	line-height: 80px;
+	float: left;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+}
+li.highlight {
+	background: #FEE25F;
+}
+
+li.sortable-placeholder {
+	border: 1px dashed #CCC;
+	background: none;
+}
+
+#connected {
+	overflow: hidden;
+	margin: auto;
+}
+.connected {
+	float: left;
+	width: 46%;
+	margin: 0;
+	padding: 0.1em;
+	border: 0.5em solid #D2DFF5;
+	margin-top: 2%;
+	min-height: 100px;
+}
+
+.connected.no2 {
+	float: left;
+	margin-left: 2%;
+}
+
+.grid li {
+	line-height: 80px;
+	float: left;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+}
