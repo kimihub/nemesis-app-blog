@@ -1,18 +1,18 @@
-BLOG APP
+blog -- app for nemesis
 =============================
 
 Author
 ------------
 * Nicolas Castelli (castelli.nc@gmail.com)
 
-Général
+Gï¿½nï¿½ral
 ------------
 
 * CHMOD 777 sur /uploads et /DB
 
 * /config.php : contient toute les constantes de l'application pour son fonctionnement
 
-* /controllers : contient les pages (/controllers/mapage.php) à enregistrer dans le fichier /config.php pour qu'elle soit listé dans le "loader" du framework
+* /controllers : contient les pages (/controllers/mapage.php) ï¿½ enregistrer dans le fichier /config.php pour qu'elle soit listï¿½ dans le "loader" du framework
 
 * /resources : contient toutes les resources (fichiers javascripts, css, images design etc)
 
@@ -20,9 +20,9 @@ Général
 Resources
 ------------
 
-Depuis les controllers les resources peuvent être récupérées avec la variable "$MVC" (déjà déclaré) qui est une instance de l'application BLOG
+Depuis les controllers les resources peuvent ï¿½tre rï¿½cupï¿½rï¿½es avec la variable "$MVC" (dï¿½jï¿½ dï¿½clarï¿½) qui est une instance de l'application BLOG
 
-CSS : charge le fichier /apps/blog/resources/css/main.css au bon endroit dans le code HTML, à noter que l'argument attendu par la méthode loadCSS est le chemin du fichier depuis le répertoire "resources" de l'application
+CSS : charge le fichier /apps/blog/resources/css/main.css au bon endroit dans le code HTML, ï¿½ noter que l'argument attendu par la mï¿½thode loadCSS est le chemin du fichier depuis le rï¿½pertoire "resources" de l'application
 
 	$MVC->loadCSS('css/main.css');
 
@@ -31,7 +31,7 @@ JS
 	$MVC->loadJS('js/main.js');
 
 
-Images : toutes les images du répertoire /uploads sont accessibles depuis ce lien
+Images : toutes les images du rï¿½pertoire /uploads sont accessibles depuis ce lien
 
 	/apps/blog/uploads/monimage.jpg
 
@@ -55,15 +55,15 @@ Miniatures
 	/images/large/monimage.jpg
 	
 	
-Insérer une image
+Insï¿½rer une image
 
 	<img src="<?php echo new URL('images/full/monimage.jpg') ?>" />
 
-Insérer des fichiers du répertoire public
+Insï¿½rer des fichiers du rï¿½pertoire public
 
 	<a href="/public/CV.pdf">Mon CV</a>
 	
-ou si le framework n'est pas à la racine du nom de domaine
+ou si le framework n'est pas ï¿½ la racine du nom de domaine
 
 	<a href="<?php echo NEMESIS_URL ?>public/CV.pdf">Mon CV</a>
 
@@ -75,15 +75,15 @@ Est inclu dans tous les fichiers de l'application, permet aussi de modifier les 
 
 Fonctionnement du router (documentation framework nemesis)
 ------------
-Détecter si la requête est ajax (Entêtes jQuery/Mootools...)
+Dï¿½tecter si la requï¿½te est ajax (Entï¿½tes jQuery/Mootools...)
 
 	if(URL::isHttpRequest()) {
-		// code à executer
+		// code ï¿½ executer
 		die;
 	}
 
 
-$HASH contient l'URL découpé
+$HASH contient l'URL dï¿½coupï¿½
 
 exemple :
 	
@@ -104,7 +104,7 @@ Plugins Dependencies
 ------------
 * HTMLhelpers
 * Images
-*	CSSmin
+* CSSmin
 
 Resources Dependencies
 ------------
