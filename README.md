@@ -1,4 +1,4 @@
-BLOG APPLICATION 
+BLOG APP
 =============================
 
 Author
@@ -33,26 +33,26 @@ JS
 
 Images : toutes les images du répertoire /uploads sont accessibles depuis ce lien
 
-	<img src="/apps/blog/uploads/monimage.jpg" />
+	/apps/blog/uploads/monimage.jpg
 
-	<img src="/images/full/monimage.jpg" />
+	/images/full/monimage.jpg
 
-	<img src="/images/full/{imageID}" />
+	/images/full/{imageID}
 
 	 
 Miniatures
 
 	<!-- ORIGINAL -->
-	<img src="/images/full/monimage.jpg" />
+	/images/full/monimage.jpg
 
 	<!-- SMALL -->
-	<img src="/images/small/monimage.jpg" />
+	/images/small/monimage.jpg
 
 	<!-- MEDIUM -->
-	<img src="/images/medium/monimage.jpg" />
+	/images/medium/monimage.jpg
 
 	<!-- LARGE -->
-	<img src="/images/large/monimage.jpg" />
+	/images/large/monimage.jpg
 	
 	
 Insérer une image
@@ -78,7 +78,7 @@ Fonctionnement du router (documentation framework nemesis)
 Détecter si la requête est ajax (Entêtes jQuery/Mootools...)
 
 	if(URL::isHttpRequest()) {
-		// code à executre
+		// code à executer
 		die;
 	}
 
