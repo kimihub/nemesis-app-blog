@@ -186,9 +186,6 @@ $(function(){
 			{
 				$.post(NEMESIS.BLOG_ROOT+'dropbox/upload', {'url': encodeURIComponent(val)}).done(function(data) {
 					if (data) {
-						
-						console.log(data);
-					
 						if (data.error)
 							showMessage('<span class="error">'+data.error+'</span>');
 						else

@@ -2,7 +2,7 @@ $(function() {
 
 	// ajax loading image
 	if (!$('#ajax-loading').length)
-		$('<img id="ajax-loading"></img>').attr('src', NEMESIS.BLOG_ROOT+'images/ajax-loader.gif').css({
+		$('<img id="ajax-loading"></img>').attr('src', NEMESIS.BLOG_ROOT+'images/ajax-loader').css({
 				'position': 'fixed',
 				'right' : '30px',
 				'top' : '5px',

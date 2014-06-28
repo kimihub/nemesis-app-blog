@@ -25,7 +25,7 @@ $(function() {
 		else
 		{
 			hideMessage();
-			$('.ajax-loading').fadeOut();
+			$('#ajax-loading').fadeOut();
 			return false;
 		}
 	};
@@ -34,7 +34,7 @@ $(function() {
 		if (confirm('Re-generer toutes les miniatures ?'))
 		{
 			showMessage('Re-création des miniatures...');
-			$('.ajax-loading').fadeIn();
+			$('#ajax-loading').fadeIn();
 			var medias_id = $.parseJSON(NEMESIS.MEDIAS_ID);
 			shiftMedia(medias_id);
 		}

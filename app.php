@@ -85,6 +85,12 @@ class blog extends App
 	
 	public function images($arguments)
 	{
+		
+		if (!$arguments || !isset($arguments[0])) {
+			$this->error404();
+			return false;
+		} 
+		
 		$size = $arguments[0];
 		$name = isset($arguments[1])? $arguments[1]:'';
 		
@@ -94,12 +100,12 @@ class blog extends App
 				$name = $m->name;
 		}
 		
-		if ($size == 'pixel.gif')
+		// shortcuts
+		if ($size == 'pixel')
 			$filePath = $this->path.'resources/pixel.gif';
 		
-		if ($size == 'ajax-loader.gif')
+		if ($size == 'ajax-loader')
 			$filePath = $this->path.'resources/ajax-loader.gif';
-	
 	
 		// small / medium / large / full
 		else if ($size == 'full')

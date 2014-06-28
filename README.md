@@ -67,12 +67,14 @@ exemple pour l'url : http://www.monsite.com/contact/object/reclamation
 
 
 Libraries Dependencies
+------------
 * RedBeanPHP 3
 
 Plugins Dependencies
 ------------
-* HTMLhelpers Plugin
-* GD Plugin
+* HTMLhelpers
+* Images
+*	CSSmin
 
 Resources Dependencies
 ------------
@@ -97,7 +99,11 @@ Resources Dependencies
 
 
 Changelog
----------
+------------
+
+### 0.2
+* Bugs upload image fixed when posting
+* Adapted to lighttpd config
 
 ### 0.1
 * Initial Release
