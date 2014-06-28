@@ -22,16 +22,16 @@ Resources
 
 Depuis les controllers les resources peuvent être récupérées avec la variable "$MVC" (déjà déclaré) qui est une instance de l'application BLOG
 
-* CSS : charge le fichier /apps/blog/resources/css/main.css au bon endroit dans le code HTML, à noter que l'argument attendu par la méthode loadCSS est le chemin du fichier depuis le répertoire "resources" de l'application
+CSS : charge le fichier /apps/blog/resources/css/main.css au bon endroit dans le code HTML, à noter que l'argument attendu par la méthode loadCSS est le chemin du fichier depuis le répertoire "resources" de l'application
 
 	$MVC->loadCSS('css/main.css');
 
-* JS
+JS
 
 	$MVC->loadJS('js/main.js');
 
 
-* Images : toutes les images du répertoire /uploads sont accessibles depuis ce lien
+Images : toutes les images du répertoire /uploads sont accessibles depuis ce lien
 
 	<img src="/apps/blog/uploads/monimage.jpg" />
 
@@ -40,7 +40,7 @@ Depuis les controllers les resources peuvent être récupérées avec la variable "$
 	<img src="/images/full/{imageID}" />
 
 	 
-* Miniatures
+Miniatures
 
 	<!-- ORIGINAL -->
 	<img src="/images/full/monimage.jpg" />
@@ -55,11 +55,11 @@ Depuis les controllers les resources peuvent être récupérées avec la variable "$
 	<img src="/images/large/monimage.jpg" />
 	
 	
-* Insérer une image
+Insérer une image
 
 	<img src="<?php echo new URL('images/full/monimage.jpg') ?>" />
 
-* Insérer des fichiers du répertoire public
+Insérer des fichiers du répertoire public
 
 	<a href="/public/CV.pdf">Mon CV</a>
 	
@@ -75,7 +75,7 @@ Est inclu dans tous les fichiers de l'application, permet aussi de modifier les 
 
 Fonctionnement du router (documentation framework nemesis)
 ------------
-* Détecter si la requête est ajax (Entêtes jQuery/Mootools...)
+Détecter si la requête est ajax (Entêtes jQuery/Mootools...)
 
 	if(URL::isHttpRequest()) {
 		// code à executre
@@ -83,7 +83,7 @@ Fonctionnement du router (documentation framework nemesis)
 	}
 
 
-* $HASH contient l'URL découpé
+$HASH contient l'URL découpé
 
 exemple :
 	
