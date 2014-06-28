@@ -5,65 +5,74 @@ Author
 ------------
 * Nicolas Castelli (castelli.nc@gmail.com)
 
-Configuration et tuto
+Général
 ------------
 
 * CHMOD 777 sur /uploads et /DB
 
-* /config.php : 
-pensez à configurer config.php avant toute utilisation, contient toute les constantes de l'application pour son fonctionnement
+* /config.php : contient toute les constantes de l'application pour son fonctionnement
 
-* /controllers :  
-les pages sont à insérer dans /controllers
-exemple : /controllers/mapage.php, puis l'enregistrer dans le fichier /config.php pour qu'elle soit listé dans le loader du framework.
+* /controllers : pages sont à insérer dans /controllers (/controllers/mapage.php) puis l'enregistrer dans le fichier /config.php pour qu'elle soit listé dans le "loader" du framework
 
-* /resources : 
-toutes les resources (fichiers javascripts, css, images design etc) sont à placer dans /resources
-On peut ensuite les charger depuis les controllers avec la variable "$MVC" (déjà déclaré) qui est une instance de l'application BLOG
-Exemple :
+* /resources : toutes les resources (fichiers javascripts, css, images design etc) sont à placer dans /resources
 
-#CSS
-	$MVC->loadCSS('css/main.css'); //chargera le fichier /apps/blog/resources/css/main.css au bon endroit dans le code HTML, à noter que l'argument attendu par la méthode loadCSS est le chemin du fichier depuis le répertoire "resources" de l'application
 
-#JS
+Resources
+------------
+
+Depuis les controllers les resources peuvent être récupérées avec la variable "$MVC" (déjà déclaré) qui est une instance de l'application BLOG
+
+* CSS : charge le fichier /apps/blog/resources/css/main.css au bon endroit dans le code HTML, à noter que l'argument attendu par la méthode loadCSS est le chemin du fichier depuis le répertoire "resources" de l'application
+	$MVC->loadCSS('css/main.css');
+
+* JS
 	$MVC->loadJS('js/main.js');
 
-#images
-toutes les images du répertoire /uploads sont accessibles depuis /images/full/monimage.jpg (/apps/blog/uploads/monimage.jpg)
-
-#miniatures
-pour (/apps/blog/uploads/monimage.jpg)
-
-SMALL : /images/small/monimage.jpg
-MEDIUM : /images/medium/monimage.jpg
-LARGE : /images/large/monimage.jpg
-
-Un moyen très simple d'insérer les images :
+* Images : toutes les images du répertoire /uploads sont accessibles depuis ce lien
+	<img src="/apps/blog/uploads/monimage.jpg" />
+ou
+	<img src="/images/full/monimage.jpg" />
+ou
+	<img src="/images/full/{imageID}" />
+	 
+* Miniatures
+ORININAL 
+	<img src="/images/full/monimage.jpg" />
+SMALL
+	<img src="/images/small/monimage.jpg" />
+MEDIUM 
+	<img src="/images/medium/monimage.jpg" />
+LARGE
+	<img src="/images/large/monimage.jpg" />
+	
+* Insérer une image
 	<img src="<?php echo new URL('images/full/monimage.jpg') ?>" />
-	// la classe URL contruira automatiquement l'url pour vous
+
+* Insérer des fichiers du répertoire public
+	<a href="/public/CV.pdf">Mon CV</a>
+ou si le framework n'est pas à la racine du nom de domaine
+	<a href="<?php echo NEMESIS_URL ?>public/CV.pdf">Mon CV</a>
 
 
-* Insérer des fichiers externes :
-Pour insérer des fichiers voici un exemple :
-
-- depuis le répertoire /public à la racine du framework
-	<a href="<?php echo NEMESIS_URL ?>public/CV.pdf">Mon CV</a> (pas de "/" avant public)
-	// correspond au fichier /public/CV.pdf, ne pas oublier la constante NEMESIS_URL qui indique le début de l'URL
+functions.php
+------------
+Est inclu dans tous les fichiers de l'application, permet aussi de modifier les fontions de base du framework dans /core/functions.php
 
 
-* Fonctions utiles
-/core/functions.php : boite à outils du framework pour parser vos chaines de caractères, et quelques racourcis
-
-* Détecter si la requête est ajax
+Fonctionnement du router (documentation framework nemesis)
+------------
+* Détecter si la requête est ajax (Entêtes jQuery/Mootools...)
 	if(URL::isHttpRequest()) {
 		// code à executre
 		die;
 	}
 
-* la variable $HASH :
-array contenant l'URL découpé
-exemple pour l'url : http://www.monsite.com/contact/object/reclamation
-=> $HASH aura la valeur array('object, 'reclamation') dans le controller contact.php
+* $HASH contient l'URL découpé
+exemple
+	http://www.monsite.com/contact/object/reclamation
+depuis le controller contact.php
+	echo $HASH; 
+	// array('object, 'reclamation')
 
 
 Libraries Dependencies
