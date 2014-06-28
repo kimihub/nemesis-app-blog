@@ -5,7 +5,7 @@ Author
 ------------
 * Nicolas Castelli (castelli.nc@gmail.com)
 
-G�n�ral
+General
 ------------
 
 * CHMOD 777 sur /uploads et /DB
