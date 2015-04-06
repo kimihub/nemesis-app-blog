@@ -1,21 +1,6 @@
 {
-
-  "repositories": {
-    "kimihub": {
-        "type": "package",
-        "package": {
-            "name": "kimihub/nemesis-framework",
-            "version": "0.5.0",
-            "source": {
-                "url": "git://github.com/kimihub/nemesis-framework.git",
-                "type": "git"
-            }
-        }
-    }
-  },
-
   "require": {
     "ircmaxell/password-compat": "1.0.4",
-    "kimihub/nemesis-framework": "0.5.0"
+    "kimihub/nemesis-framework": "dev-master"
   }
 }
