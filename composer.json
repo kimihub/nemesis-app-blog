@@ -4,6 +4,6 @@
   "version": "0.3.1",
   "require": {
     "ircmaxell/password-compat": "1.0.4",
-    "kimihub/nemesis-framework": "*"
+    "kimihub/nemesis-framework": "dev-master"
   }
 }
