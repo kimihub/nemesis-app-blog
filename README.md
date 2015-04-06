@@ -3,7 +3,7 @@ blog -- app for nemesis
 
 Author
 ------------
-* Nicolas Castelli (castelli.nc@gmail.com)
+* Kimi (kim.himitus@gmail.com)
 
 General
 ------------
@@ -39,7 +39,7 @@ Images : toutes les images du r�pertoire /uploads sont accessibles depuis ce l
 
 	/images/full/{imageID}
 
-	 
+
 Miniatures
 
 	<!-- ORIGINAL -->
@@ -53,8 +53,8 @@ Miniatures
 
 	<!-- LARGE -->
 	/images/large/monimage.jpg
-	
-	
+
+
 Ins�rer une image
 
 	<img src="<?php echo new URL('images/full/monimage.jpg') ?>" />
@@ -62,7 +62,7 @@ Ins�rer une image
 Ins�rer des fichiers du r�pertoire public
 
 	<a href="/public/CV.pdf">Mon CV</a>
-	
+
 ou si le framework n'est pas � la racine du nom de domaine
 
 	<a href="<?php echo NEMESIS_URL ?>public/CV.pdf">Mon CV</a>
@@ -86,13 +86,13 @@ D�tecter si la requ�te est ajax (Ent�tes jQuery/Mootools...)
 $HASH contient l'URL d�coup�
 
 exemple :
-	
+
 	http://www.monsite.com/contact/object/reclamation
 
 
 depuis le controller contact.php :
-	
-	echo $HASH; 
+
+	echo $HASH;
 	// array('object, 'reclamation')
 
 
@@ -130,6 +130,9 @@ Resources Dependencies
 
 Changelog
 ------------
+
+### 0.3.0
+* load dependencies with composer
 
 ### 0.2
 * Bugs upload image fixed when posting
