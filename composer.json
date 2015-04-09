@@ -2,14 +2,12 @@
   "name": "kimihub/nemesis-app-example",
   "description": "A lightweight jQuery blog",
   "require": {
-    "php": "~5.6.0",
+    "php": ">=5.6.0",
     "ext-pdo_sqlite": "*",
-    "ext-gd": "*",
+    "ext-gd": "*"
     "kimihub/nemesis-framework": "dev-master"
   },
   "platform": {
-    "php": "~5.6.0",
-    "ext-pdo_sqlite": "*",
-    "ext-gd": "*"
+    "php": "~5.6.0"
   }
 }
