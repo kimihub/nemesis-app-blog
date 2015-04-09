@@ -61,7 +61,6 @@ class blog extends App
 
 		// 1 week session time
 		//$this->session_time = intval(7 * 24 * 60 * 60);
-    Session::$life_time = intval(7 * 24 * 60 * 60);
 
 		if (defined('APP_VERSION'))
 			$this->version = APP_VERSION;
