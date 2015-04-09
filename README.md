@@ -1,28 +1,36 @@
-blog -- app for nemesis
-=============================
+# Nemesis App Example - Blog #
 
-Author
+Here is an example of a MVC Web App built on [Nemesis Framework](https://github.com/kimihub/nemesis-framework).
+
+This app is a lightweight [jQuery](https://www.jquery.com) blog. To test it, simply deploy it on a PaaS like [Heroku](https://www.heroku.com/) or [Openshift](https://www.openshift.com/).
+
+Keep in mind that is just a demo or a skeleton for a Nemesis App, its stability in production has not been tested.
+
+
+Demo
 ------------
-* Kimi (kim.himitus@gmail.com)
 
-General
+Link : [https://demo-nemesis-app.herokuapp.com/](https://demo-nemesis-app.herokuapp.com/)
+User : user
+Password : pwd
+
+
+Configuration
 ------------
 
-* CHMOD 777 sur /uploads et /DB
+* /config.php : contains all constants of the app
 
-* /config.php : contient toute les constantes de l'application pour son fonctionnement
+* /controllers : contains all pages (/controllers/mypage.php) to define in /config.php and list in the loader framework
 
-* /controllers : contient les pages (/controllers/mapage.php) � enregistrer dans le fichier /config.php pour qu'elle soit list� dans le "loader" du framework
-
-* /resources : contient toutes les resources (fichiers javascripts, css, images design etc)
+* /resources : contains all resources (javascripts, css, images design etc), **this is also the public directory**
 
 
 Resources
 ------------
 
-Depuis les controllers les resources peuvent �tre r�cup�r�es avec la variable "$MVC" (d�j� d�clar�) qui est une instance de l'application BLOG
+From controllers all ressources can be included with "$MVC" which is an instance of the app
 
-CSS : charge le fichier /apps/blog/resources/css/main.css au bon endroit dans le code HTML, � noter que l'argument attendu par la m�thode loadCSS est le chemin du fichier depuis le r�pertoire "resources" de l'application
+CSS : load the file /apps/blog/resources/css/main.css
 
 	$MVC->loadCSS('css/main.css');
 
@@ -31,82 +39,72 @@ JS
 	$MVC->loadJS('js/main.js');
 
 
-Images : toutes les images du r�pertoire /uploads sont accessibles depuis ce lien
+Images : all images in /uploads are reachable from these links
 
-	/apps/blog/uploads/monimage.jpg
-
-	/images/full/monimage.jpg
+	/images/full/image.jpg
 
 	/images/full/{imageID}
 
 
-Miniatures
+Thumbnails
 
 	<!-- ORIGINAL -->
-	/images/full/monimage.jpg
+	/images/full/image.jpg
 
 	<!-- SMALL -->
-	/images/small/monimage.jpg
+	/images/small/image.jpg
 
 	<!-- MEDIUM -->
-	/images/medium/monimage.jpg
+	/images/medium/image.jpg
 
 	<!-- LARGE -->
-	/images/large/monimage.jpg
+	/images/large/image.jpg
 
 
-Ins�rer une image
+Insert an image
 
-	<img src="<?php echo new URL('images/full/monimage.jpg') ?>" />
+	<img src="<?php echo new URL('images/full/image.jpg') ?>" />
 
-Ins�rer des fichiers du r�pertoire public
+Insert a file in resources public directory
 
-	<a href="/public/CV.pdf">Mon CV</a>
+	<a href="/file.pdf">My file</a>
 
-ou si le framework n'est pas � la racine du nom de domaine
+or
 
-	<a href="<?php echo NEMESIS_URL ?>public/CV.pdf">Mon CV</a>
+	<a href="<?php echo NEMESIS_URL ?>/file.pdf">My </a>
 
 
-Fichier functions.php
+
+Router
 ------------
-Est inclu dans tous les fichiers de l'application, permet aussi de modifier les fontions de base du framework dans /core/functions.php
+Check [Nemesis-Framework README](https://github.com/kimihub/nemesis-framework)
 
-
-Fonctionnement du router (documentation framework nemesis)
-------------
-D�tecter si la requ�te est ajax (Ent�tes jQuery/Mootools...)
-
+    //jQuery/Mootools headers
 	if(URL::isHttpRequest()) {
-		// code � executer
+		// code 
 		die;
 	}
 
 
-$HASH contient l'URL d�coup�
+$HASH contains the split URL
 
-exemple :
+example :
 
-	http://www.monsite.com/contact/object/reclamation
+	http://www.website.com/contact/object/reclamation
 
 
-depuis le controller contact.php :
+from the contact.php controller :
 
 	echo $HASH;
 	// array('object, 'reclamation')
 
 
-Libraries Dependencies
+PHP lib dependencies
 ------------
-* RedBeanPHP 3
+* RedBeanPHP 3.5
+* ImageGD
 
-Plugins Dependencies
-------------
-* HTMLhelpers
-* Images
-* CSSmin
-
-Resources Dependencies
+JS, CSS, fonts lib dependencies
 ------------
 * jQuery 1.9
 * jQuery html5lightbox
@@ -128,11 +126,19 @@ Resources Dependencies
 * alegreya-regular-webfont generated from fontSquirrel
 
 
+Author
+------------
+* Kimi (kim.himitus@gmail.com)
+
+
 Changelog
 ------------
 
-### 0.3.0
-* load dependencies with composer
+### 0.4
+* load ReadBeanPHP and Nemesis Framework with composer
+
+### 0.3
+* implements new features of Nemesis Framework (Session, Old plugins to core)
 
 ### 0.2
 * Bugs upload image fixed when posting

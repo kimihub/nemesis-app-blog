@@ -1,18 +1,15 @@
 <?php
 /***************************************************************************/
-/* Author: Nicolas Castelli */
+/* Author: Kimi */
 /* App Version: 1.0 Beta */
-/* Vous pouvez modifier les constantes ci-dessous pour changer le comportement générale de l'application mais */
-/* attention à ne pas les supprimer, certaines sont indispensables au fonctionnement de l'application ! */
-/* si vous n'avez pas besoin d'une des constantes, définissez une valeur vide */
 /***************************************************************************/
 /* ADMIN */
-define('ADMIN_EMAIL', 'castelli.nc@gmail.com');
+define('ADMIN_EMAIL', 'me@domain.com');
 define('ADMIN_USER', 'user');
 define('ADMIN_PWD', 'pwd');
 
 /* DEFAULTS METAS */
-define('META_TITLE','Mes créations');
+define('META_TITLE','My creations');
 define('META_DESCRIPTION', '');
 define('META_KEYWORDS', '');
 define('META_AUTHOR', '');
@@ -23,7 +20,7 @@ define('JQUERY', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.j
 define('HTML5SHIM', 'http://html5shim.googlecode.com/svn/trunk/html5.js');
 
 // FONT NAME
-define('FONT_NAME', 'font/stylesheet.css'); // CHEMIN DEPUIS LA RACINE DES RESOURCES
+define('FONT_NAME', 'font/stylesheet.css'); // PATH FROM RESOURCES ROOT
 
 // DISQUS ACCOUNT
 define('DISQUS_SHORTNAME', 'fmnemesis');
@@ -33,7 +30,7 @@ define('TIME_LOCALE', 'fr_FR');
 setlocale(LC_TIME, TIME_LOCALE);
 
 /* APP VERSION  
-	Changer cette valeur pour mettre à jour le cache à la fois côté serveur et côté client en cas de mise à jour CSS ou JS !
+	Change it to update CSS an JS
 */
 define('APP_VERSION', '0.1');
 
@@ -41,7 +38,7 @@ define('APP_VERSION', '0.1');
 define('USE_CACHE', 0);
 
 /* THUMBNAILS 
-	PENSEZ A RE-CREER LES MINIATURES DANS LE BACK-OFFICE SI VOUS MODIFIEZ CES PARAMETRES
+	RE-GENERATE THUMBS IN THE BACK-OFFICE IF YOU EDIT THESE SETTINGS
 */
 define('SMALL_WIDTH', 120);
 define('SMALL_HEIGHT', 120);
@@ -53,31 +50,31 @@ define('LARGE_WIDTH', 1800);
 define('LARGE_HEIGHT', 1600);
 
 
-/* ARTICLES PAR PAGES */
+/* POSTS PER PAGES */
 define('POSTS_NUMBER', 2);
 
 /* 
-LISTE DES PAGES (l'ordre est celui qui apparaitra dans le menu des pages
+PAGES LIST (The order is this one which will appear in the nav menu)
 array(
-	'NOM DE MA PAGE' => 'NOM DU FICHIER DU CONTROLLER (SANS l'EXTENSION)'
+	'PAGE NAME' => 'CONTROLLER FILE NAME (WITHOUT EXTENSION)'
 )
-SEULE LA PAGE ERROR404 N'EST PAS A LISTER
+THE ERROR404 PAGE DOES NOT HAVE TO BE LISTED
 */
 
 $NEMESIS = Loader::getInstance();
 $NEMESIS->pages = array(
-	'chronologie' => 'chronologie',
-	'liens' => 'liens',
+	'history' => 'history',
+	'links' => 'links',
 	'contact' => 'contact',
 );
 
-/* TYPE DE BASE DE DONNEE */
-define('DB_TYPE', 'SQLITE'); //  VOUS POUVEZ ESSAYER "MYSQL" SI SQLITE N'EST PAS INSTALLEE SUR VOTRE SERVEUR
+/* DATABASE TYPE */
+define('DB_TYPE', 'SQLITE'); //  YOU CAN TRY "MYSQL" IF SQLITE IS NOT INSTALLED ON THE SERVER
 
-/* CONFIGURATION POUR SQLITE */
-define('DB_FILEPATH', 'DB/db.txt'); // CHEMIN DEPUIS LA RACINE DE L'APPLICATION
+/* SQLITE CONFIGURATION */
+define('DB_FILEPATH', 'DB/db.txt'); // PATH FROM ROOT APP
 
-/* CONFIGURATION POUR MYSQL */
+/* MYSQL CONFIGURATION */
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'dbname');
 define('DB_USER', 'user');
