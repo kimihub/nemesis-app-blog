@@ -3,6 +3,8 @@
   "description": "A lightweight jQuery blog",
   "require": {
     "kimihub/nemesis-framework": "dev-master",
-    "gabordemooij/redbean": "3.5"
+    "ext-sqlite3": "*",
+    "ext-pdo_sqlite": "*",
+    "ext-gd": "*"
   }
 }

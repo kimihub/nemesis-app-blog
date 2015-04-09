@@ -101,6 +101,12 @@ from the contact.php controller :
 	// array('object, 'reclamation')
 
 
+PHP ext dependencies
+------------
+* SQLITE3
+* PDO_SQLITE
+* GD
+
 PHP lib dependencies
 ------------
 * [RedBeanPHP 3.5](http://www.redbeanphp.com/)
