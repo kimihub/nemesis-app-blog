@@ -2,7 +2,8 @@
   "name": "kimihub/nemesis-app-example",
   "description": "A lightweight jQuery blog",
   "require": {
-    "php": "~5.6.0",
+    "php": "~5.5.23",
+    "hhvm": "~3.3.4", 
     "ext-sqlite3": "*",
     "ext-pdo_sqlite": "*",
     "ext-gd": "*",
