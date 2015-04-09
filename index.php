@@ -93,7 +93,7 @@ class blog extends App
 				'font' => $this->resources_url.FONT_NAME,
 			));
 			
-			$this->loadCSS('css/normalize.min.css');
+			$this->loadCSS('css/normalize.css');
 			$this->loadCSS('css/main.css');
 			$this->loadCSS('loader/loader.css');
 			$this->loadJS('loader/loader.js');
