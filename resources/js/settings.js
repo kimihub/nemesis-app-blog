@@ -1,9 +1,9 @@
 $(function() {
-	
+
 	$('#dropdb').click(function(e) {
-		if (confirm('Mais qu\'est-ce que tu fous ??? t\'es sur le point de tout effacer !'))
+		if (confirm('WTF are you doing ??? you\'re about to delete every datas !'))
 		{
-			showMessage('Suppression de la base de donnée...');
+			showMessage('Emptying database...');
 			$.ajax(NEMESIS.BLOG_ROOT+'settings/dropdb').done(function(data) {
 				displayLog(data.toString());
 				$('#ajax-loading').fadeOut();
@@ -12,9 +12,9 @@ $(function() {
 		}
 		return false;
 	});
-	
+
 	var shiftMedia = function (medias_id) {
-		
+
 		if (medias_id.length)
 		{
 			$.post(NEMESIS.BLOG_ROOT+'settings/purgecacheimages', {id: medias_id.shift()}).done(function(data) {
@@ -29,11 +29,11 @@ $(function() {
 			return false;
 		}
 	};
-	
+
 	$('#purgeimages').click(function(e) {
-		if (confirm('Re-generer toutes les miniatures ?'))
+		if (confirm('Re-generate thumbnails ?'))
 		{
-			showMessage('Re-création des miniatures...');
+			showMessage('Re-generating thumbnails...');
 			$('#ajax-loading').fadeIn();
 			var medias_id = $.parseJSON(NEMESIS.MEDIAS_ID);
 			shiftMedia(medias_id);

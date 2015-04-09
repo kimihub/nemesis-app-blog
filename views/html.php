@@ -35,21 +35,21 @@
 				</nav>
 				<?php endif; ?>
 				<!-- PAGES LINK END -->
-				
+
 				<?php if (isset($COLLECTIONS->admin)) : ?>
 				<h3>admin</h3>
 				<nav>
 					<ul>
-						<li><a href="<?php echo new URL('post/add') ?>">poster</a></li>
-						<li><a href="<?php echo new URL('cat/manage') ?>">thèmatiques</a></li>
-						<li><a href="<?php echo new URL('dropbox') ?>">images</a></li>
-						<li><a href="<?php echo new URL('settings') ?>">maintenance</a></li>
+						<li><a href="<?php echo new URL('post/add') ?>">Add post</a></li>
+						<li><a href="<?php echo new URL('cat/manage') ?>">Edit categories</a></li>
+						<li><a href="<?php echo new URL('dropbox') ?>">Manage images</a></li>
+						<li><a href="<?php echo new URL('settings') ?>">Settings</a></li>
 					</ul>
 				</nav>
-				<input type="button" id="logout" value="Déconnexion" />
+				<input type="button" id="logout" value="Logout" />
 				<?php $this->loadJS('js/logout.js') ?>
 				<?php else: ?>
-				<a href="<?php echo new URL('login') ?>"><h3>administration</h3></a>
+				<a href="<?php echo new URL('login') ?>"><h3>admin</h3></a>
 				<?php endif; ?>
 			</aside>
 			<section id="main">

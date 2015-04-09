@@ -7,7 +7,7 @@
 	{
 		$CATS[] = $cat->name;
 	}
-	
+
 	$CATS_JSON = json_encode($CATS);
 	$CATS = implode (',', $CATS);
 ?>
@@ -19,7 +19,7 @@
 	{
 		$TAGS[] = $tag->name;
 	}
-	
+
 	$TAGS_JSON = json_encode($TAGS);
 	$TAGS = implode(',', $TAGS);
 ?>
@@ -30,28 +30,28 @@
 
 <div class="commands">
 	<p class="shortcut">
-		<?php echo $HTML->button(array('data-id' => 'aTitle', 'value' => 'Titre')) ?>
+		<?php echo $HTML->button(array('data-id' => 'aTitle', 'value' => 'Title')) ?>
 	</p>
 	<p class="shortcut">
 		<?php echo $HTML->button(array('data-id' => 'aPublishDate', 'value' => 'Date')) ?>
 	</p>
 	<p class="shortcut">
-		<?php echo $HTML->button(array('data-id' => 'aTags', 'value' => 'Mots-clefs')) ?>
+		<?php echo $HTML->button(array('data-id' => 'aTags', 'value' => 'Keywords')) ?>
 	</p>
 	<p class="shortcut">
-		<?php echo $HTML->button(array('data-id' => 'aCats', 'value' => 'Thèmatiques')) ?>
+		<?php echo $HTML->button(array('data-id' => 'aCats', 'value' => 'Categories')) ?>
 	</p>
 	<p class="shortcut">
-		<?php echo $HTML->button(array('data-id' => 'aCaption', 'value' => 'Légende')) ?>
+		<?php echo $HTML->button(array('data-id' => 'aCaption', 'value' => 'Caption')) ?>
 	</p>
 	<p class="shortcut">
-		<?php echo $HTML->button(array('data-id' => 'aMediaType', 'value' => 'Affichage')) ?>
+		<?php echo $HTML->button(array('data-id' => 'aMediaType', 'value' => 'Display')) ?>
 	</p>
 	<p class="shortcut">
 		<?php echo $HTML->button(array('data-id' => 'aDropbox', 'value' => 'Images')) ?>
 	</p>
 	<p class="submit">
-	<?php echo (!$POST->type || $POST->type == 'draft')? $HTML->submit(array('name' => 'draft', 'value' => ($POST->type == 'draft')? 'Enregistrer le brouillon':'Enregistrer un brouillon')):'' ?>
+	<?php echo (!$POST->type || $POST->type == 'draft')? $HTML->submit(array('name' => 'draft', 'value' => ($POST->type == 'draft')? 'Save the draft':'Save a draft')):'' ?>
 	<?php echo $HTML->submit(array('name' => 'save', 'value' => 'Poster')) ?>
 	</p>
 </div>
@@ -83,7 +83,7 @@
     // });
 </script>
 
-<h3 id="aCats">Thèmatiques</h3>
+<h3 id="aCats">Categories</h3>
 <p><?php echo $HTML->text(array('id' => 'cats', 'name' => 'cats', 'value' => $CATS)) ?><span class="suggestions"><strong>Suggestions</strong> : <span id="suggestedCats" class="tagInputSuggestedTagList"></span></span></p>
 
 <script type="text/javascript">
@@ -100,7 +100,7 @@
 		  // boldify:true
 
 		// });
-		
+
 	// });
 </script>
 
@@ -118,7 +118,7 @@
 <?php else : ?>
 <?php echo $HTML->radio(array('name' => 'mediaType', 'value' => 'thumbnails', 'id' => 'thumbnails')) ?>
 <?php endif; ?>
-<?php echo $HTML->label(array('value' => 'Miniatures', 'for' => 'thumbnails')) ?>
+<?php echo $HTML->label(array('value' => 'Thumbnails', 'for' => 'thumbnails')) ?>
 </p>
 <p>
 <?php if ($POST->mediaType == 'gallery') : ?>
@@ -126,7 +126,7 @@
 <?php else : ?>
 <?php echo $HTML->radio(array('name' => 'mediaType', 'value' => 'gallery', 'id' => 'gallery')) ?>
 <?php endif; ?>
-<?php echo $HTML->label(array('value' => 'Galerie', 'for' => 'gallery')) ?>
+<?php echo $HTML->label(array('value' => 'Gallery', 'for' => 'gallery')) ?>
 </p>
 
 <h3 id="aDropbox">Images</h3>

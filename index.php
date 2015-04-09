@@ -252,7 +252,7 @@ class blog extends App
 			{
 				if ($_POST['user'] != ADMIN_USER || $_POST['pwd'] != ADMIN_PWD)
 				{
-					$this->addMessage('error', 'Mauvaise combinaison utilisateur/mot de passe');
+					$this->addMessage('error', 'Wrong Username/Password');
 					$this->displayMessages();
 					exit();
 				}
@@ -503,7 +503,7 @@ class blog extends App
 					$cat = new category($this, $v);
 					$cat->editPosition($k);
 				}
-				$this->addMessage('info', 'Nouvel ordre des catégories !');
+				$this->addMessage('info', 'New categories order !');
 				$this->displayMessages();
 				exit();
 			}
@@ -516,7 +516,7 @@ class blog extends App
 					$this->addMessage('category_id', $cat->id);
 				}
 				else
-					$this->addMessage('alert', $_POST['category'].' existe déjà');
+					$this->addMessage('alert', $_POST['category'].' already exists');
 
 				$this->displayMessages();
 				exit();
@@ -527,7 +527,7 @@ class blog extends App
 			$this->loadJS('jquery.plugins/jquery.sortable.js');
 			$this->loadJS('js/categories.js');
 			$this->injectCol('html', 'content', 'category_manage');
-			$this->injectVar('category_manage', array('categories_edit_title' => 'Edition des catégories'));
+			$this->injectVar('category_manage', array('categories_edit_title' => 'Edit categories'));
 			$this->injectCol('category_manage', 'HTML', new HTMLhelpers());
 			$this->injectCol('category_manage', 'categories', category::explore());
 			$this->addToBuffer($this->getView('html'));
@@ -602,14 +602,14 @@ class blog extends App
 				{
 					case 'dropdb':
 						R::nuke();
-						echo 'La base de donnée vient d\'être réinitialisé';
+						echo 'The database is empty !';
 						die;
 					break;
 
 					case 'purgecacheimages':
 						$media = new media($this, intval($_POST['id']));
 						$media->createThumbnails();
-						echo 'Les miniatures ont été réinitialisées pour l\'image '.$_POST['id'];
+						echo 'Thumbnails re-generated for the image '.$_POST['id'];
 						die;
 					break;
 				}

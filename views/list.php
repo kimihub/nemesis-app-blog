@@ -41,11 +41,11 @@
 	<footer>
 		<ul>
 		<?php if (!$SINGLE) : ?>
-			<li class="comment"><a class="button" href="<?php echo new URL('post/'.$post->id) ?>">Commenter</a></li>
+			<li class="comment"><a class="button" href="<?php echo new URL('post/'.$post->id) ?>">Comment</a></li>
 		<?php endif; ?>
 		<?php if ($ADMIN) : ?>
-			<li><a class="button edit" href="<?php echo new URL('post/add/'.$post->id) ?>">Editer</a><li>
-			<li><a class="button delete" data-id="<?php echo $post->id ?>" href="#">Supprimer</a><li>
+			<li><a class="button edit" href="<?php echo new URL('post/add/'.$post->id) ?>">Edit</a><li>
+			<li><a class="button delete" data-id="<?php echo $post->id ?>" href="#">Delete</a><li>
 		<?php endif; ?>
 		</ul>
 		<div class="clr"></div>
@@ -53,7 +53,7 @@
 		<?php $MVC->render('disqus_load') ?>
 		<?php $MVC->render('disqus_comments') ?>
 		<?php endif; ?>
-		
+
 	</footer>
 </article>
 <?php endforeach; ?>

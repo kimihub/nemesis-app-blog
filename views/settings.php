@@ -1,4 +1,4 @@
 <ul>
-<li><a id="purgeimages" href="#">Réinitialiser les miniatres</a></li>
-<li><a id="dropdb" href="#">Réinitialiser la base de donnée</a> (attention irréversible !!)</li>
+<li><a id="purgeimages" href="#">Re-generate thumbnails</a></li>
+<li><a id="dropdb" href="#">Empty database</a> (Warning !!)</li>
 </ul>

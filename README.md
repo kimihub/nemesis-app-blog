@@ -12,7 +12,7 @@ Demo
 
 Link : [https://demo-nemesis-app.herokuapp.com/](https://demo-nemesis-app.herokuapp.com/)
 
-User : user
+Username : user
 
 Password : pwd
 
@@ -83,7 +83,7 @@ Check [Nemesis-Framework README](https://github.com/kimihub/nemesis-framework)
 
     //jQuery/Mootools headers
 	if(URL::isHttpRequest()) {
-		// code 
+		// code
 		die;
 	}
 

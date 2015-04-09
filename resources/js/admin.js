@@ -1,6 +1,6 @@
 $(function() {
 	displayLog = function(message) {
-	
+
 		if (!$('#logs').length)
 		{
 			$('<div></div>').attr('id', 'logs').css({
@@ -18,30 +18,30 @@ $(function() {
 				'cursor': 'pointer',
 				'color': 'black'
 			}).click(function() {$('#logs').hide('slow')}).appendTo(document.body);
-			
-			
+
+
 			$('#logs').show('slow');
-			
+
 		}
 		else
 		{
 			$('#logs').show();
 		}
-		
+
 		$('#ajax-loading').fadeIn();
-		
+
 		$('#logs').append('<div>'+message+'</div>');
 		$('#logs').animate({ scrollTop: $('#logs').get(0).scrollHeight }, 0);
 	};
-	
+
 	$('.delete').each(function() {
-		
-		$(this).removeClass('delete');	
+
+		$(this).removeClass('delete');
 		$(this).click(function(e) {
 			e.preventDefault();
-			if (confirm('Supprimer l\'article ?'))
+			if (confirm('Delete post ?'))
 			{
-				showMessage('Suppression de d\'un article...');
+				showMessage('Deleting post...');
 				$.ajax(NEMESIS.BLOG_ROOT+'post/delete/'+$(this).attr('data-id')).done(function(data) {
 					showMessage(data);
 					location.replace(location.href);
@@ -59,4 +59,3 @@ jQuery.browser.mozilla = /mozilla/.test(navigator.userAgent.toLowerCase()) && !/
 jQuery.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
 jQuery.browser.opera = /opera/.test(navigator.userAgent.toLowerCase());
 jQuery.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
-

@@ -7,6 +7,6 @@
 <?php endforeach; ?>
 </ul>
 </div>
-<p><?php echo $HTML->text(array('class' => 'nameCategory', 'value' => '', 'placeholder' => 'Ajouter une thèmatique')) ?>
+<p><?php echo $HTML->text(array('class' => 'nameCategory', 'value' => '', 'placeholder' => 'Add a category')) ?>
 <?php echo $HTML->button(array('class' => 'addCategory noPadding', 'value' => '+')) ?></p>
-<p><?php echo $HTML->button(array('class' => 'position', 'name' => 'position', 'value' => 'Enregistrer l\'ordre des thèmatiques')) ?></p>
+<p><?php echo $HTML->button(array('class' => 'position', 'name' => 'position', 'value' => 'Save categories order')) ?></p>

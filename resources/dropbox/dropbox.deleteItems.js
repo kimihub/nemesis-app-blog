@@ -1,7 +1,7 @@
 $(function(){
-	
+
 	var dropbox = $('#dropbox');
-	
+
 	var toggleAttach = function () {
 		if ($(this).hasClass('selected'))
 		{
@@ -12,28 +12,28 @@ $(function(){
 			$(this).addClass('selected').addClass('done');
 		}
 	};
-	
+
 	$('.medias input').each(function () {
 		createImage($(this).val());
 	});
-	
-						
+
+
 	function createImage(file,nolazyload){
 
-		
+
 		var preview = $('<div></div>').addClass('preview').append($('<span></span>').addClass('imageHolder').append($('<img></img>')).append($('<span></span>').addClass('uploaded')));
-		
+
 		var	image = $('img', preview);
-			
-		
+
+
 		image.addClass('loaded');
-		
+
 		if (!nolazyload)
 		{
 			image.attr('data-original', NEMESIS.BLOG_ROOT+'images/small/'+file);
 			image.addClass('lazy');
 			image.attr('src', NEMESIS.BLOG_ROOT+'images/pixel.gif');
-			image.show().lazyload({ 
+			image.show().lazyload({
 				effect : "fadeIn"
 			});
 		}
@@ -41,13 +41,13 @@ $(function(){
 		{
 			image.attr('src', NEMESIS.BLOG_ROOT+'images/small/'+file);
 		}
-		
+
 		preview.attr('data-id', file);
-		
+
 		preview.click(toggleAttach);
 
 		dropbox.prepend(preview);
-		
+
 		return preview;
 	}
 
@@ -57,37 +57,37 @@ $(function(){
 			$.ajax(NEMESIS.BLOG_ROOT+'dropbox/delete/'+$(el).eq(0).attr('data-id')).done(function(data) {
 				if (data)
 				{
-					displayLog('L\'image '+data+ ' vient d\'être supprimée');
+					displayLog('Image '+data+ ' has been deleted');
 					$(el).eq(0).remove();
 				}
 				deleteItems('.selected');
-			}); 
+			});
 		}
 		else
 		{
-			showMessage('Suppression terminée');
+			showMessage('Deleting done !');
 			$('#ajax-loading').fadeOut(function() {
 				$('.commands').fadeIn();
-			});		
+			});
 			return false;
 		}
 	};
-		
+
 	$('#deleteSelected').click(function (e) {
 		if ($('.selected').length) {
-			if (confirm('Supprimer les éléments sélectionnés ?')) {
-				
+			if (confirm('Delete selected items ?')) {
+
 				$('.commands').fadeOut(function() {
-					showMessage('Suppression des éléments sélectionnés...');
+					showMessage('Deleting selected items...');
 					$('#ajax-loading').fadeIn();
 					displayLog('');
 					deleteItems('.selected');
 				});
-				
+
 			}
 		}
 		else
-			showMessage('<span clas="error">Aucun élément n\'est sélectionné</span>');
+			showMessage('<span clas="error">No selected item</span>');
 		return false;
 	});
 

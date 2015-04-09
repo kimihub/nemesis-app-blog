@@ -24,11 +24,11 @@ var setupWyziwym = function() {
 var triggerForm = function(form) {
 	var showdown = new Attacklab.showdown.converter();
 	$('#caption').val(showdown.makeHtml($('#caption').val()));
-	
+
 	$('.commands').fadeOut(function() {
 		$('#ajax-loading').fadeIn();
 		$.post(NEMESIS.BLOG_ROOT+'post/add', $(form).serialize()+submitValue).done(function(data) {
-			showMessage('Redirection vers l\'article...');
+			showMessage('Redirect to the post...');
 			$('#ajax-loading').fadeOut();
 			location.replace(NEMESIS.BLOG_ROOT+'post/'+data);
 		});
@@ -46,36 +46,36 @@ $(function() {
 			scrollTop: $('#'+$(this).attr('data-id')).offset().top - $('.commands').height() - 10
 		}, 50);
 	});
-	
-	
+
+
 	$('textarea').autogrow();
 	$('input').keydown(function(e) {
 		var keyCode = e.keyCode || e.which;
-		if (keyCode == 13) {               
+		if (keyCode == 13) {
 			if (e.preventDefault) e.preventDefault();
 			return false;
 		}
 	});
-	
+
 	$('input').keyup(function(e) {
 			return false;
 	});
-	
+
 	$('form input[name="draft"]').click(function(e) {
 		e.preventDefault();
 		submitValue = '&'+$(this).attr('name')+'='+$(this).val();
-		showMessage('Enregistrement de l\'article...');
+		showMessage('Saving post...');
 		triggerForm($('form'));
 	});
-	
+
 	$('form input[name="save"]').click(function(e) {
 		e.preventDefault();
 		submitValue = '&'+$(this).attr('name')+'='+$(this).val();
-		showMessage('Enregistrement de l\'article...');
+		showMessage('Saving post...');
 		triggerForm($('form'));
 	});
-	
-	$('form').bind('submit', function(e) {              
+
+	$('form').bind('submit', function(e) {
 		e.preventDefault();
 		return false;
 	});

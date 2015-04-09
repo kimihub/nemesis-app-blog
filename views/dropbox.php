@@ -3,12 +3,12 @@
 
 <div class="commands">
 	<p class="submit">
-		<?php echo $HTML->button(array('id' => 'deleteSelected', 'value' => 'Supprimer la sélection')) ?>
+		<?php echo $HTML->button(array('id' => 'deleteSelected', 'value' => 'Delete selected items')) ?>
 	</p>
 </div>
 
 <div id="dropbox" class="deleteItems">
-	
+
 </div>
 
 <div class="medias">
