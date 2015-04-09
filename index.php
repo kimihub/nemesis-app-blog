@@ -42,7 +42,8 @@ $NEMESIS->initClass('Router');
 
 class blog extends App
 {
-	private $session_time = 0;
+	//private $session_time = 0;
+  private $session = null;
 
 	public function setup()
 	{
@@ -59,7 +60,8 @@ class blog extends App
 		}
 
 		// 1 week session time
-		$this->session_time = intval(7 * 24 * 60 * 60);
+		//$this->session_time = intval(7 * 24 * 60 * 60);
+    Session::$lifetime = intval(7 * 24 * 60 * 60);
 
 		if (defined('APP_VERSION'))
 			$this->version = APP_VERSION;
@@ -160,7 +162,7 @@ class blog extends App
 		}
 
 
-        include_once($this->getModel('image'));
+    include_once($this->getModel('image'));
 
 		$images = new image();
 
@@ -197,7 +199,7 @@ class blog extends App
 	public function isLogged()
 	{
 
-		session_set_cookie_params($this->session_time);
+		/*session_set_cookie_params($this->session_time);
 		ini_set('session.gc_maxlifetime', $this->session_time);
 
 		if (!isset($_SESSION))
@@ -223,7 +225,12 @@ class blog extends App
 
 		}
 
-		return false;
+		return false;*/
+
+    if (!$this->session)
+      $this->session = new Session();
+
+    return $this->session->check('connect');
 	}
 
 	public function logout()
@@ -233,11 +240,17 @@ class blog extends App
 			if (!$this->isLogged())
 				exit();
 
+      /*
 			$session = R::load('session', $_SESSION['connect']);
 			R::trash($session);
 
 			unset($_SESSION['connect']);
 			session_destroy();
+      */
+      if (!$this->session)
+        $this->session = new Session();
+
+      $this->session->kill('connect');
 			exit();
 		}
 
@@ -257,14 +270,18 @@ class blog extends App
 					exit();
 				}
 
+        /*
 				$session = R::dispense('session');
 				$session->session_id = session_id();
 				$session->session_time = time() + $this->session_time;
 				$session->session_browser = $_SERVER['HTTP_USER_AGENT'];
 				$session->session_ip = $_SERVER['REMOTE_ADDR'];
 				$_SESSION['connect'] = R::store($session);
+        */
 
-				$this->addMessage('logged', 1);
+        $this->session->secure('connect');
+
+        $this->addMessage('logged', 1);
 				$this->displayMessages();
 				exit();
 			}
