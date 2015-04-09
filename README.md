@@ -2,7 +2,10 @@
 
 Here is an example of a MVC Web App built on [Nemesis Framework](https://github.com/kimihub/nemesis-framework).
 
-This app is a lightweight [jQuery](https://www.jquery.com) blog. To test it, simply deploy it on a PaaS like [Heroku](https://www.heroku.com/) or [Openshift](https://www.openshift.com/).
+This app is a lightweight [jQuery](https://www.jquery.com) blog where you can manage posts, categories, images, display them as a gallery, thumbnails, or a lightbox...
+There is not any pagination, the posts page displays the items with a lazy load system.    
+
+To test it, simply deploy it on a PaaS like [Heroku](https://www.heroku.com/) or [Openshift](https://www.openshift.com/).
 
 Keep in mind that is just a demo or a skeleton for a Nemesis App, its stability in production has not been tested.
 
