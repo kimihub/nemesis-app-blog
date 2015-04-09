@@ -40,7 +40,7 @@ $(function(){
 				$.data(file).addClass('selected').attr('data-id', response).click(toggleAttach);
 			}
 			else
-				showMessage('<span class="error">Erreur dans l\'envoie de l\'image</span>');
+				showMessage('<span class="error">Error:'+response+'</span>');
 
 			// response is the JSON object that post_file.php returns
 		},
