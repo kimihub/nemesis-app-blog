@@ -10,7 +10,7 @@ Keep in mind that is just a demo or a skeleton for a Nemesis App, its stability 
 Demo
 ------------
 
-Link : [https://demo-nemesis-app.herokuapp.com/](https://demo-nemesis-app.herokuapp.com/)
+Link : [http://demo-nemesis-app.herokuapp.com/](http://demo-nemesis-app.herokuapp.com/)
 
 Username : user
 
@@ -103,7 +103,6 @@ from the contact.php controller :
 
 PHP ext dependencies
 ------------
-* SQLITE3
 * PDO_SQLITE
 * GD
 
