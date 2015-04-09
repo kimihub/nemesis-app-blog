@@ -103,9 +103,10 @@ from the contact.php controller :
 
 PHP ext dependencies
 ------------
-* PDO_SQLITE
-* GD
-* cUrl
+* pdo_sqlite
+* gd
+* exif
+* curl
 
 PHP lib dependencies
 ------------
