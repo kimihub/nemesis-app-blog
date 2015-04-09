@@ -3,7 +3,7 @@
 Here is an example of a MVC Web App built on [Nemesis Framework](https://github.com/kimihub/nemesis-framework).
 
 This app is a lightweight [jQuery](https://www.jquery.com) blog where you can manage posts, categories, images, display them as a gallery, thumbnails, or a lightbox...
-There is not any pagination, the posts page displays the items with a lazy load system.    
+There is not any pagination, the posts page displays the items with a lazy load system.
 
 To test it, simply deploy it on a PaaS like [Heroku](https://www.heroku.com/) or [Openshift](https://www.openshift.com/).
 
@@ -113,7 +113,7 @@ PHP ext dependencies
 
 PHP lib dependencies
 ------------
-* [RedBeanPHP 3.5](http://www.redbeanphp.com/)
+* [RedBeanPHP 3.7](http://www.redbeanphp.com/)
 * ImageGD
 
 JS, CSS, fonts lib dependencies
