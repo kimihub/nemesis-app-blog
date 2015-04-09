@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "98c74049d5a33a963387fbb286edf061",
+    "hash": "8057aa750e99ae623872dbfa95eae926",
     "packages": [
         {
             "name": "kimihub/nemesis-framework",
@@ -61,6 +61,7 @@
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.0",
+        "lib-curl": "*",
         "ext-pdo_sqlite": "*",
         "ext-gd": "*"
     },

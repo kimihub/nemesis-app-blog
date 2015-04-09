@@ -105,6 +105,7 @@ PHP ext dependencies
 ------------
 * PDO_SQLITE
 * GD
+* cUrl
 
 PHP lib dependencies
 ------------
