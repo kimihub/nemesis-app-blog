@@ -128,11 +128,6 @@ JS, CSS, fonts lib dependencies
 * alegreya-regular-webfont generated from fontSquirrel
 
 
-Author
-------------
-* Kimi (kim.himitus@gmail.com)
-
-
 Changelog
 ------------
 
