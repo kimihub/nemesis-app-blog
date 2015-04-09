@@ -3,7 +3,7 @@
 
 <head>
 <?php $MVC->render('head') ?>
-</head> 
+</head>
 
 <body>
 
@@ -12,7 +12,7 @@
 			<a href="<?php echo new URL('') ?>"><h1 class="title">{$h1_title}</h1></a>
 		</header>
 	</div>
-	
+
 	<div class="main-container">
 		<div class="main wrapper clearfix">
 			<aside>
@@ -37,7 +37,7 @@
 				<!-- PAGES LINK END -->
 				
 				<?php if (isset($COLLECTIONS->admin)) : ?>
-				<h3>administration</h3>
+				<h3>admin</h3>
 				<nav>
 					<ul>
 						<li><a href="<?php echo new URL('post/add') ?>">poster</a></li>
@@ -53,16 +53,16 @@
 				<?php endif; ?>
 			</aside>
 			<section id="main">
-<?php endif; ?>	
+<?php endif; ?>
 
-<?php if (isset($COLLECTIONS->controller)) : ?>	
+<?php if (isset($COLLECTIONS->controller)) : ?>
 <?php echo $COLLECTIONS->controller ?>
-<?php else : ?>	
+<?php else : ?>
 	<?php if (isset($COLLECTIONS->content)) : ?>
 	<?php $MVC->render($COLLECTIONS->content) ?>
 	<?php endif; ?>
 <?php endif; ?>
-	
+
 <?php if (!URL::isHttpRequest()) : ?>
 			</section>
 		</div> <!-- #main -->

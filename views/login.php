@@ -1,4 +1,4 @@
-<?php $HTML = $MVC->NEMESIS->plugin('HTMLhelpers') ?>
+<?php $HTML = new HTMLhelpers(); ?>
 <div class="login">
 	<p><?php echo $HTML->text(array('id' => 'user', 'placeholder' => 'Nom d\'utilisateur')) ?></p>
 	<p><?php echo $HTML->password(array('id' => 'pwd', 'placeholder' => 'Mot de passe')) ?></p>
