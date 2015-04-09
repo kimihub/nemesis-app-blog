@@ -103,7 +103,7 @@ from the contact.php controller :
 
 PHP lib dependencies
 ------------
-* RedBeanPHP 3.5
+* [RedBeanPHP 3.5](http://www.redbeanphp.com/)
 * ImageGD
 
 JS, CSS, fonts lib dependencies
