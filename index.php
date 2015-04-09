@@ -37,6 +37,8 @@ get_errors();
 core_functions();
 core_autoloader();
 
+$NEMESIS = Loader::getInstance();
+
 class blog extends App
 {
 	private $session_time = 0;
