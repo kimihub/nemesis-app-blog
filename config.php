@@ -29,7 +29,7 @@ define('DISQUS_SHORTNAME', 'fmnemesis');
 define('TIME_LOCALE', 'fr_FR');
 setlocale(LC_TIME, TIME_LOCALE);
 
-/* APP VERSION  
+/* APP VERSION
 	Change it to update CSS an JS
 */
 define('APP_VERSION', '0.1');
@@ -37,9 +37,11 @@ define('APP_VERSION', '0.1');
 /* SERVER CACHE */
 define('USE_CACHE', 0);
 
-/* THUMBNAILS 
+/* THUMBNAILS
 	RE-GENERATE THUMBS IN THE BACK-OFFICE IF YOU EDIT THESE SETTINGS
 */
+
+define('THUMB_PATH', NEMESIS_PROCESS_PATH.'uploads/thumbnails');
 define('SMALL_WIDTH', 120);
 define('SMALL_HEIGHT', 120);
 
@@ -53,7 +55,7 @@ define('LARGE_HEIGHT', 1600);
 /* POSTS PER PAGES */
 define('POSTS_NUMBER', 2);
 
-/* 
+/*
 PAGES LIST (The order is this one which will appear in the nav menu)
 array(
 	'PAGE NAME' => 'CONTROLLER FILE NAME (WITHOUT EXTENSION)'
@@ -79,4 +81,3 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'dbname');
 define('DB_USER', 'user');
 define('DB_PASSWORD', 'password');
-

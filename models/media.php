@@ -38,7 +38,7 @@ class media
 		// Small
 		$small = $images->create(array(
 			'source'=> $this->BLOG->path . 'uploads/' . $this->bean->name,
-			'destination'=> CACHE . filename($this->bean->name) . '.small.' . extension($this->bean->name),
+			'destination'=> THUMB_PATH . filename($this->bean->name) . '.small.' . extension($this->bean->name),
 			'width'=> SMALL_WIDTH,
 			'height'=> SMALL_HEIGHT,
 		));
@@ -46,7 +46,7 @@ class media
 		// Medium
 		$medium = $images->create(array(
 			'source'=> $this->BLOG->path . 'uploads/' .  $this->bean->name,
-			'destination'=> CACHE . filename($this->bean->name) . '.medium.' . extension($this->bean->name),
+			'destination'=> THUMB_PATH . filename($this->bean->name) . '.medium.' . extension($this->bean->name),
 			'width'=> MEDIUM_WIDTH,
 			'height'=> MEDIUM_HEIGHT,
 		));
@@ -54,7 +54,7 @@ class media
 		// Large
 		$large = $images->create(array(
 			'source'=> $this->BLOG->path . 'uploads/' . $this->bean->name,
-			'destination'=> CACHE . filename($this->bean->name) . '.large.' . extension($this->bean->name),
+			'destination'=> THUMB_PATH . filename($this->bean->name) . '.large.' . extension($this->bean->name),
 			'width'=> LARGE_WIDTH,
 			'height'=> LARGE_HEIGHT,
 		));
@@ -63,9 +63,9 @@ class media
 	public function delete ()
 	{
 		@unlink($this->BLOG->path . 'uploads/' .$this->bean->name);
-		@unlink(CACHE . filename($this->bean->name) . '.small.' . extension($this->bean->name));
-		@unlink(CACHE . filename($this->bean->name) . '.medium.' . extension($this->bean->name));
-		@unlink(CACHE . filename($this->bean->name) . '.large.' . extension($this->bean->name));
+		@unlink(THUMB_PATH . filename($this->bean->name) . '.small.' . extension($this->bean->name));
+		@unlink(THUMB_PATH . filename($this->bean->name) . '.medium.' . extension($this->bean->name));
+		@unlink(THUMB_PATH . filename($this->bean->name) . '.large.' . extension($this->bean->name));
 
 		$posts = R::related($this->bean, 'post');
 

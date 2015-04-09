@@ -152,7 +152,7 @@ class blog extends App
 		else if ($size == 'full')
 			$filePath = $this->path.'uploads/'.$name;
 		else
-			$filePath = CACHE.filename($name).'.'.$size.'.'.extension($name);
+			$filePath = THUMB_PATH.filename($name).'.'.$size.'.'.extension($name);
 
 		if (!file_exists($filePath))
 		{
