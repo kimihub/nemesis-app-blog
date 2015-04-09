@@ -32,8 +32,8 @@ require $composerAutoloader;
 * Load the NemesisFramework components.
 */
 
-display_errors();
-//get_errors();
+//display_errors();
+get_errors();
 core_functions();
 core_autoloader();
 
