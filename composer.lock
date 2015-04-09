@@ -1,11 +1,68 @@
 {
-  "name": "kimihub/nemesis-app-example",
-  "description": "A lightweight jQuery blog",
-  "require": {
-    "php": "~5.3.0",
-    "ext-sqlite3": "*",
-    "ext-pdo_sqlite": "*",
-    "ext-gd": "*",
-    "kimihub/nemesis-framework": "dev-master"
-  }
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "98c74049d5a33a963387fbb286edf061",
+    "packages": [
+        {
+            "name": "kimihub/nemesis-framework",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kimihub/nemesis-framework.git",
+                "reference": "62c8113106ef153cffa88c977501f4abbe8d9fd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kimihub/nemesis-framework/zipball/62c8113106ef153cffa88c977501f4abbe8d9fd3",
+                "reference": "62c8113106ef153cffa88c977501f4abbe8d9fd3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "nemesis.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kim I. Castelli",
+                    "email": "kim.himitsu@gmail.com",
+                    "homepage": "https://kimihub.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Small PHP5 Framework",
+            "homepage": "https://github.com/kimihub/nemesis-framework",
+            "keywords": [
+                "framework",
+                "mvc",
+                "rest"
+            ],
+            "time": "2015-04-09 16:51:56"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "kimihub/nemesis-framework": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3.0",
+        "ext-pdo_sqlite": "*",
+        "ext-gd": "*"
+    },
+    "platform-dev": []
 }
