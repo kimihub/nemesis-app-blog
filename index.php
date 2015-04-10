@@ -48,16 +48,18 @@ class blog extends App
 	public function setup()
 	{
 		// perms
-		/*if (($perm=getperms($dir=$this->path.'uploads/')) != '0777')
+		if (($perm=getperms($dir=$this->path.'uploads/')) != '0777')
 		{
-			error_log('MVC.App.Blog.uploads : you must set 0777 perms to '.$dir.' ('.$perm.')');
+      chmod($dir, 0777);
+			//error_log('MVC.App.Blog.uploads : you must set 0777 perms to '.$dir.' ('.$perm.')');
 		}
 
 		// perms
-		if (($perm=getperms($dir=$this->path.DB_FILEPATH)) != '0777')
+		if (($perm=getperms($dir=$this->path.'uploads/thumbnails')) != '0777')
 		{
-			error_log('MVC.App.Blog.uploads : you must set 0777 perms to '.$dir.' ('.$perm.')');
-		}*/
+      chmod($dir, 0777);
+			//error_log('MVC.App.Blog.uploads : you must set 0777 perms to '.$dir.' ('.$perm.')');
+		}
 
 		// 1 week session time
 		//$this->session_time = intval(7 * 24 * 60 * 60);
