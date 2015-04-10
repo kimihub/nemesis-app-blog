@@ -130,7 +130,7 @@
 </p>
 
 <h3 id="aDropbox">Images</h3>
-<p><?php echo $HTML->text(array('placeholder' => 'Ajouter une image à partir d\'un lien http://...', 'class' =>'addLink')) ?></p>
+<p><?php echo $HTML->text(array('placeholder' => 'Add an image from a URL http://...', 'class' =>'addLink')) ?></p>
 <div id="dropbox">
 	<span class="message"><i>Drop your images here ...</i></span>
 </div>
