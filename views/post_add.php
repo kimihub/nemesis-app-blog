@@ -56,14 +56,14 @@
 	</p>
 </div>
 
-<h3 id="aTitle">Titre</h3>
+<h3 id="aTitle">Title</h3>
 <p><?php echo $HTML->text(array('name' => 'title', 'value' => $POST->title)) ?></p>
 
-<h3 id="aPublishDate">Date de publication</h3>
+<h3 id="aPublishDate">Publish Date</h3>
 <p><?php echo $HTML->input('date', array('name' => 'publishDate', 'value' => (is_date($POST->publishDate) == 'TIMESTAMP')? date('Y-m-d',$POST->publishDate):date('Y-m-d'), 'class' => 'date')) ?></p>
 
 
-<h3 id="aTags">Mots-clefs</h3>
+<h3 id="aTags">Keywords</h3>
 <p><?php echo $HTML->text(array('id' => 'tags', 'name' => 'tags', 'value' => $TAGS)) ?><span class="suggestions"><strong>Suggestions</strong> : <span id="suggestedTags" class="tagInputSuggestedTagList"></span></span></p>
 
 <script type="text/javascript">
@@ -105,13 +105,13 @@
 </script>
 
 
-<h3 id="aCaption">Légende</h3>
+<h3 id="aCaption">Caption</h3>
 <p><?php echo $HTML->textarea(array('id' => 'caption', 'name' => 'caption', 'value' => $POST->caption)) ?></p>
 <div style='clear:both;'></div>
 <div id="caption-preview"></div>
 
 
-<h3 id="aMediaType">Type d'affichage des images</h3>
+<h3 id="aMediaType">Images display type</h3>
 <p>
 <?php if ($POST->mediaType == 'thumbnails') : ?>
 <?php echo $HTML->radio(array('name' => 'mediaType', 'value' => 'thumbnails', 'id' => 'thumbnails', 'checked' => 'checked')) ?>
@@ -132,7 +132,7 @@
 <h3 id="aDropbox">Images</h3>
 <p><?php echo $HTML->text(array('placeholder' => 'Ajouter une image à partir d\'un lien http://...', 'class' =>'addLink')) ?></p>
 <div id="dropbox">
-	<span class="message"><i>Déplacer vos images ici ...</i></span>
+	<span class="message"><i>Drop your images here ...</i></span>
 </div>
 <div class="medias">
 <?php foreach ($MEDIAS as $m) : ?>
