@@ -200,7 +200,7 @@ $(function(){
 							{
 								$(el).val('');
 								var preview = createImage(data, false, true);
-								showMessage('Image uploadée !');
+								showMessage('Image uploaded!');
 							}
 							else
 								showMessage('<span class="error">Error when image sent</span>');
