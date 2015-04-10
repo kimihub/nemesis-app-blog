@@ -2,5 +2,5 @@
 
 <ul>
   <li><a href="https://www.github.com">GitHub</a></li>
-  <li><a href="https://www.ethereum.com">Ethereum</a></li>
+  <li><a href="https://www.ethereum.org">Ethereum</a></li>
 </ul>
