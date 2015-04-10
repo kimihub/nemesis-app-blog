@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8e5d9bfd4bba0a51698fad2d130f6e97",
+    "hash": "3c971206414b2936a4a7751f89f62c8e",
     "packages": [
         {
             "name": "kimihub/nemesis-framework",
-            "version": "dev-master",
+            "version": "0.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kimihub/nemesis-framework.git",
-                "reference": "62c8113106ef153cffa88c977501f4abbe8d9fd3"
+                "reference": "17c6406b53dbd6ff011f4f0b4c6591856c057e8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kimihub/nemesis-framework/zipball/62c8113106ef153cffa88c977501f4abbe8d9fd3",
-                "reference": "62c8113106ef153cffa88c977501f4abbe8d9fd3",
+                "url": "https://api.github.com/repos/kimihub/nemesis-framework/zipball/17c6406b53dbd6ff011f4f0b4c6591856c057e8f",
+                "reference": "17c6406b53dbd6ff011f4f0b4c6591856c057e8f",
                 "shasum": ""
             },
             "require": {
@@ -48,15 +48,13 @@
                 "mvc",
                 "rest"
             ],
-            "time": "2015-04-09 16:51:56"
+            "time": "2015-04-10 02:40:25"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "kimihub/nemesis-framework": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
